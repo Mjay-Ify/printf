@@ -6,13 +6,13 @@
  * Return: the length of the string
  */
 
-int printf_string(va_list va)
+int printf_string(va_list args)
 {
 	char *str;
 	int i;
 	int len;
 
-	str = va_arg(va, char *);
+	str = va_arg(args, char *);
 	if (str == NULL)
 	{
 		str = "(null)";

@@ -6,11 +6,11 @@
  * Return: 1
  */
 
-int printf_char(va_list va)
+int printf_char(va_list args)
 {
 	char str;
 
-	str = va_arg(va, int);
+	str = va_arg(args, int);
 	_putchar(str);
 	return (1);
 }

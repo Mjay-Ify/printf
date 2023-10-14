@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_37 - print %
+ * printf_37 - print %
  * Return: int
  */
 
-int print_37(void)
+int printf_37(void)
 {
 	_putchar(37);
 	return (1);

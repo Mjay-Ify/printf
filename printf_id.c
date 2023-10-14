@@ -9,7 +9,7 @@
 int printf_int(va_list args)
 {
 	int n = va_arg(args, int);
-	int i = n;
+	int i = 0;
 
 	if (n < 0)
 	{
@@ -31,7 +31,7 @@ int printf_int(va_list args)
 int print_dec(va_list args)
 {
 	int n = va_arg(args, int);
-	int i = n;
+	int i = 0;
 
 	if (n < 0)
 	{
