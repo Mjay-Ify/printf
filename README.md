@@ -1,3 +1,5 @@
+PARTNER 1 and 2 is here
+
 the printf function is used in the C programming language (and in many other programming languages that have borrowed this function) to produce formatted output. It stands for "print formatted," and it allows you to display data on the screen or write it to a file with specific formatting.
 
 The printf function takes a format string as its argument, which is a string that contains plain text as well as format specifiers. Format specifiers are placeholders that specify how the data should be formatted and where it should be inserted into the output. When you call printf, it processes the format string and any additional arguments and produces output according to the format specifiers.
