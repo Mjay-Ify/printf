@@ -28,7 +28,7 @@ int printf_HEX_number(unsigned int numb)
 		temp = temp / 16;
 		j++;
 	}
-	for (j = value - 1; j >= 0; j++)
+	for (j = value - 1; j >= 0; j--)
 	{
 		if (array[j] > 9)
 		{

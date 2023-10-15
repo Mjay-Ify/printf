@@ -6,7 +6,7 @@
  *
  * Return: integer
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
 	myconversion c[] = {
 		{"%c", printf_char}, 
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 
-mylabel:
+Here:
 
 	while (format[i] != '\0')
 	{
@@ -46,7 +46,7 @@ mylabel:
 			{
 				length = length + c[j].operation(args);
 				i = i + 2;
-				goto mylabel;
+				goto Here;
 			}
 			j--;
 		}

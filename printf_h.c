@@ -15,19 +15,18 @@ int printf_hexdecimal(va_list value)
 
 	while (num / 16 != 0)
 	{
-		num /= 16;
+		num = num / 16;
 		val++;
 	}
 	val++;
 	array = malloc(sizeof(int) * val);
-
 
 	for (j = 0; j < val; j++)
 	{
 		array[j] = temp % 16;
 		temp = temp / 16;
 	}
-	for (j = val - 1; j >= 0; j++)
+	for (j = val - 1; j >= 0; j--)
 	{
 		if (array[j] > 9)
 			array[j] = array[j] + 39;

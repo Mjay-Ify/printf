@@ -12,10 +12,11 @@ int printf_rev(va_list args)
 	int i;
 	int count = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	if (s == NULL)
+		s = "(null)";
+	while(s[count] != '\0')
 		count++;
 	for (i = count - 1; i >= 0; i--)
 		_putchar(s[i]);
-	_putchar('\n');
 	return (count);
 }

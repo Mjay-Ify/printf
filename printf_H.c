@@ -15,7 +15,7 @@ int printf_HEXDECIMAL(va_list value)
 
 	while (num / 16 != 0)
 	{
-		num /= 16;
+		num = num / 16;
 		val++;
 	}
 	val++;
@@ -26,7 +26,7 @@ int printf_HEXDECIMAL(va_list value)
 		array[c] = temp % 16;
 		temp = temp / 16;
 	}
-	for (c = val - 1; c >= 0; c++)
+	for (c = val - 1; c >= 0; c--)
 	{
 		if (array[c] > 9)
 			array[c] = array[c] + 7;

@@ -38,7 +38,7 @@ int printf_hex_number(unsigned long int numb)
 			array[j] = array[j] + 39;
 		}
 		_putchar(array[j] + '0');
-		j++;
+		j--;
 	}
 	free(array);
 	return (value);
