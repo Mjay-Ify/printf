@@ -5,7 +5,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
+#include <limits.h>
 
 /**
  * struct pattern - Corresponding to the printf conversion specifiers

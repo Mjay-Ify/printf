@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	myconversion i[] = {
+	myconversion c[] = {
 		{"%c", printf_char}, 
 		{"%s", printf_string},
 	       	{"%%", printf_37},
@@ -26,8 +26,8 @@ int _printf(const char *format, ...)
 	};
 
 	va_list args;
-	int j = 0, length = 0;
-	int k;
+	int i = 0, length = 0;
+	int j;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
@@ -37,21 +37,21 @@ int _printf(const char *format, ...)
 
 mylabel:
 
-	while (format[j] != '\0')
+	while (format[i] != '\0')
 	{
-		k = 13;
-		while(k >= 0)
+		j = 13;
+		while(j >= 0)
 		{
-			if (i[k].name[0] == format[j] && i[k].name[j] == format[j + 1])
+			if (c[j].name[0] == format[i] && c[j].name[1] == format[i + 1])
 			{
-				length = length + i[k].operation(args);
-				j = j + 2;
+				length = length + c[j].operation(args);
+				i = i + 2;
 				goto mylabel;
 			}
-			k--;
+			j--;
 		}
-		_putchar(format[j]);
-		j++;
+		_putchar(format[i]);
+		i++;
 		length++;
 	}
 	va_end(args);
