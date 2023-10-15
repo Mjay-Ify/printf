@@ -6,7 +6,7 @@
  * Return: the length
  */
 
-int print_rev(va_list args)
+int printf_rev(va_list args)
 {
 	char *s = va_arg(args, char*);
 	int i;

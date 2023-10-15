@@ -37,7 +37,7 @@ int printf_hex_number(unsigned long int numb);
 int printf_hexdecimal(va_list value);
 int printf_HEXDECIMAL(va_list value);
 int output_pointer(va_list value);
-int print_rev(va_list args);
+int printf_rev(va_list args);
 int printf_rot13(va_list args);
 	
 #endif

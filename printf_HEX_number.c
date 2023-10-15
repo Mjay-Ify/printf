@@ -17,8 +17,8 @@ int printf_HEX_number(unsigned int numb)
 		numb = numb / 16;
 		value++;
 	}
-	value++
-	array - malloc(sizeof(int) * value);
+	value++;
+	array = malloc(sizeof(int) * value);
 
 	j = 0;
 

@@ -6,7 +6,7 @@
  *
  * Return: integer
  */
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 {
 	myconversion i[] = {
 		{"%c", printf_char}, 
@@ -14,16 +14,15 @@ int _printf(const char *format, ...);
 	       	{"%%", printf_37},
 	       	{"%d", printf_dec},
 	       	{"%b", printf_bin},
-	       	{"%u", printf_unisigned},
+	       	{"%u", printf_unsigned},
 	       	{"%i", printf_int},
+		{"%r", printf_rev},
+		{"%R", printf_rot13},
 	       	{"%o", printf_oct},
 	       	{"%S", printf_string_excl},
 	       	{"%p", output_pointer},
 	       	{"%x", printf_hexdecimal},
-	       	{"%X", printf_HEXDECIMAL}, 
-		{"%r", printf_rev},
-		{"%R", printf_rot13}
-	};
+	       	{"%X", printf_HEXDECIMAL}
 
 	va_list args;
 	int j = 0, length = 0;
@@ -34,11 +33,12 @@ int _printf(const char *format, ...);
 	{
 		return (-1);
 	}
+
 mylabel:
 
-	while (format[j] = '\0')
+	while (format[j] != '\0')
 	{
-		j = 13;
+		k = 13;
 		while(k >= 0)
 		{
 			if (i[k].name[0] == format[j] && i[k].name[j] == format[j + 1])
@@ -47,12 +47,12 @@ mylabel:
 				j = j + 2;
 				goto mylabel;
 			}
-			k--
+			k--;
 		}
-		_putchar(pattern[j]);
+		_putchar(format[j]);
 		j++;
-		length;
+		length++;
 	}
 	va_end(args);
-	return(length);
+	return (length);
 }

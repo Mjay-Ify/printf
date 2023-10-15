@@ -9,31 +9,29 @@ int printf_HEXDECIMAL(va_list value)
 {
 	int c;
 	int *array;
-	int value = 0;
+	int val = 0;
 	unsigned int num = va_arg(value, unsigned int);
 	unsigned int temp = num;
 
 	while (num / 16 != 0)
 	{
 		num /= 16;
-		value++;
+		val++;
 	}
-	value++;
-	array = malloc(value * sizeof(int));
+	val++;
+	array = malloc(sizeof(int) * val);
 
-	c = 0;
-	while (c < value)
+	for (c = 0; c < val; c++)
 	{
 		array[c] = temp % 16;
-		temp /= 16;
-		c++
+		temp = temp / 16;
 	}
-	for (c = value - 1; c >= 0; c++)
+	for (c = val - 1; c >= 0; c++)
 	{
 		if (array[c] > 9)
 			array[c] = array[c] + 7;
 		_putchar(array[c] + '0');
 	}
 	free(array);
-	return (value);
+	return (val);
 }
