@@ -14,8 +14,6 @@ int printf_string_excl(va_list value)
 	int val;
 
 	s = va_arg(value, char *);
-	if (s == NULL)
-		s = "(null)";
 
 	j = 0;
 

@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 	       	{"%p", output_pointer},
 	       	{"%x", printf_hexdecimal},
 	       	{"%X", printf_HEXDECIMAL}
+	};
 
 	va_list args;
 	int j = 0, length = 0;
