@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -17,5 +18,7 @@ int printf_dec(va_list args);
 int printf_bin(va_list args);
 int printf_unsigned(va_list args);
 int printf_oct(va_list args);
+int printf_hex(va_list args);
+int printf_HEX(va_list args);
 
 #endif
