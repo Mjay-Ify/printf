@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - mimics printf
- * @format: identifier look for
+ * _printf - Printf function emulation.
+ * @format: The identifier to locate within the code.
  *
  * Return: integer
  */
@@ -35,7 +35,7 @@ int _printf(const char * const format, ...)
 		return (-1);
 	}
 
-Here:
+my_label:
 
 	while (format[i] != '\0')
 	{
@@ -46,7 +46,7 @@ Here:
 			{
 				length = length + c[j].operation(args);
 				i = i + 2;
-				goto Here;
+				goto my_label;
 			}
 			j--;
 		}

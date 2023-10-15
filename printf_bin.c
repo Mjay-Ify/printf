@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * printf_bin - convert to binary
- * @args: arg
- * Return: int	
+ * printf_bin - Convert to binar numerals
+ * @args: input argumnent
+ * Return: int
  */
 
 int printf_bin(va_list args)

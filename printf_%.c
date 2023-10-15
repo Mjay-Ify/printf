@@ -2,6 +2,7 @@
 
 /**
  * printf_37 - print %
+ *
  * Return: int
  */
 

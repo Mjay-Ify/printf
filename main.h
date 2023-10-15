@@ -10,6 +10,7 @@
 /**
  * struct pattern - Corresponding to the printf conversion specifiers
  * @name: A pointer to char for integer format options for (d, i, u, o, x, X)
+ *
  * @operation: A specifier-handling function pointer.
  *
  */
