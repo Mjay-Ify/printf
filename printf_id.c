@@ -20,6 +20,7 @@ int printf_int(va_list args)
 	{
 		_putchar('-');
 		num = -num;
+		n = -n;
 		last = -last;
 		i++;
 	}
@@ -67,6 +68,7 @@ int printf_dec(va_list args)
 	{
 		_putchar('-');
 		num = -num;
+		n = -n;
 		last = -last;
 		i++;
 	}

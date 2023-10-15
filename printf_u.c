@@ -20,6 +20,7 @@ int printf_unsigned(va_list args)
 	{
 		_putchar('-');
 		num = -num;
+		n = -n;
 		last = -last;
 		i++;
 	}
