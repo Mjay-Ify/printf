@@ -11,7 +11,7 @@ int printf_string_excl(va_list value)
 	char *s;
 	int j = 0;
 	int length = 0;
-	int value;
+	int val;
 
 	s = va_arg(value, char *);
 	if (s == NULL)
@@ -26,13 +26,13 @@ int printf_string_excl(va_list value)
 			_putchar('\\');
 			_putchar('x');
 			length = length + 2;
-			value = s[j];
-			if (value < 16)
+			val = s[j];
+			if (val < 16)
 			{
 				_putchar('0');
 				length++;
 			}
-			length = length + printf_HEX_number(value);
+			length = length + printf_HEX_number(val);
 		}
 		else
 		{

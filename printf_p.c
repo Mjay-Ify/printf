@@ -9,29 +9,25 @@
 
 int output_pointer(va_list value)
 {
-	void *z;
-	char *s = "(null)";
+	void *p;
+	char *s = "(nil)";
 	long int c;
-	int d;
-	int j;
+	int j, d;
 
-	z = va_arg(value, void*);
+	p = va_arg(value, void*);
 	if (p == NULL)
 	{
-		int j = 0;
-
-		while (s[j] != '\0')
+		for (j = 0; s[j] != '\0'; j++)
 		{
 			_putchar(s[j]);
-			j++
 		}
 		return (j);
 	}
 
-	c = (unsigned long int)z;
+	c = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	d = printf_hex_number(j);
+	d = printf_hex_number(c);
 	return (d + 2);
 }
 

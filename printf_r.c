@@ -8,7 +8,7 @@
 
 int print_rev(va_list args)
 {
-	char *s = va_arg(args, char*)
+	char *s = va_arg(args, char*);
 	int i;
 	int count = 0;
 

@@ -23,7 +23,7 @@ int printf_rot13(va_list args)
 			{
 				_putchar(b[j]);
 				count++;
-				k = 1
+				k = 1;
 			}
 		}
 		if (!k)
@@ -32,5 +32,5 @@ int printf_rot13(va_list args)
 			count++;
 		}
 	}
-	return (counter);
+	return (count);
 }
