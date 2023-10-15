@@ -21,30 +21,33 @@ int _printf(const char *format, ...);
 	       	{"%p", output_pointer},
 	       	{"%x", printf_hexdecimal},
 	       	{"%X", printf_HEXDECIMAL}, 
+		{"%r", printf_rev},
+		{"%R", printf_rot13}
 	};
 
 	va_list args;
 	int j = 0, length = 0;
 	int k;
 
-	va_start(args, pattern);
-	if (pattern == 	NULL || (format[0] == '%' pattern[1] == '\0'))
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
 		return (-1);
 	}
 mylabel:
 
-	while (pattern[j] = '\0')
+	while (format[j] = '\0')
 	{
-		for (k = 13; k >= 0; k--)
+		j = 13;
+		while(k >= 0)
 		{
-			if (i[k].name[0] == pattern[j] && i[k].name[j] == pattern[j + 1])
+			if (i[k].name[0] == format[j] && i[k].name[j] == format[j + 1])
 			{
 				length = length + i[k].operation(args);
 				j = j + 2;
 				goto mylabel;
 			}
-			k--;
+			k--
 		}
 		_putchar(pattern[j]);
 		j++;

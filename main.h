@@ -13,13 +13,12 @@
  * @operation: A specifier-handling function pointer.
  *
  */
-typedef struct pattern
+typedef struct format
 {
 	char *name;
 	int (*operation)();
 } myconversion;
 
-int _printf(const char *format, ...);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printf_char(va_list args);
@@ -39,5 +38,6 @@ int printf_hexdecimal(va_list value);
 int printf_HEXDECIMAL(va_list value);
 int output_pointer(va_list value);
 int print_rev(va_list args);
-
+int printf_rot13(va_list args);
+	
 #endif

@@ -3,7 +3,7 @@
 /**
  * print_rev - print in reverse
  * @args: parameter
- * Return: the string
+ * Return: the length
  */
 
 int print_rev(va_list args)
@@ -17,5 +17,5 @@ int print_rev(va_list args)
 	for (i = count - 1; i >= 0; i--)
 		_putchar(s[i]);
 	_putchar('\n');
-	return (j);
+	return (count);
 }
