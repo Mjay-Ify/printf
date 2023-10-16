@@ -46,7 +46,6 @@ int printf_int(va_list args)
 	return (i);
 }
 
-#include "main.h"
 
 /**
  * printf_dec - prints dec
