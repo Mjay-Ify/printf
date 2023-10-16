@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev - print in reverse
+ * printf_rev - print in reverse
  * @args: parameter
  * Return: the length
  */
@@ -14,7 +14,7 @@ int printf_rev(va_list args)
 
 	if (s == NULL)
 		s = "(null)";
-	while(s[count] != '\0')
+	while (s[count] != '\0')
 		count++;
 	for (i = count - 1; i >= 0; i--)
 		_putchar(s[i]);

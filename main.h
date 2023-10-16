@@ -40,5 +40,12 @@ int printf_HEXDECIMAL(va_list value);
 int output_pointer(va_list value);
 int printf_rev(va_list args);
 int printf_rot13(va_list args);
+int short_i(va_list);
+int long_i(va_list);
+int case_l(unsigned long int val);
+int case_u(unsigned long int val);
+int checker(char c, char flags[], int l);
+int flag_checker(char f, long int dig, char func);
+
 	
 #endif

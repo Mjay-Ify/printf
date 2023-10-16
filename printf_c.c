@@ -2,7 +2,7 @@
 
 /**
  * printf_char - prints char
- * @va: arguements
+ * @args: arguements
  * Return: 1
  */
 

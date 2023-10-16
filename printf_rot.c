@@ -2,7 +2,7 @@
 
 /**
  * printf_rot13 - encode string
- * @c: string
+ * @args: string
  * Return: encoded string
  */
 
