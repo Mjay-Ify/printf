@@ -2,7 +2,7 @@
 
 /**
  * printf_unsigned - prints int
- * @args: arg
+ * @args: inputs arg
  * Return: number of char print
  */
 

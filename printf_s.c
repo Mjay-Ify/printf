@@ -2,30 +2,37 @@
 
 /**
  * printf_string - print string
- * @va: arg
- * Return: the length of the string
+ * @args: inputs parameter
+ *
+ * Return: the string's length.
  */
 
 int printf_string(va_list args)
 {
 	char *str;
-	int i;
-	int len;
+	int j;
+	int length;
 
 	str = va_arg(args, char *);
 	if (str == NULL)
 	{
 		str = "(null)";
-		len = _strlen(str);
-		for (i = 0; i < len; i++)
-			_putchar(str[i]);
-		return (len);
+		length = _strlen(str);
+		for (j = 0; j < length; j++)
+			_putchar(str[j]);
+		return (length);
 	}
 	else
 	{
-		len = _strlen(str);
-		for (i = 0; i < len; i++)
-			_putchar(str[i]);
-		return (len);
+		length = _strlen(str);
+
+		j = 0;
+
+		while (j < length)
+		{
+			_putchar(str[j]);
+			j++;
+		}
+		return (length);
 	}
 }

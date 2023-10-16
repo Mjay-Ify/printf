@@ -3,6 +3,7 @@
 /**
  * printf_hex_number - Display a hexdecimal number.
  * @numb: input value.
+ *
  * Return: value.
  */
 int printf_hex_number(unsigned long int numb)

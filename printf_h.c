@@ -3,6 +3,7 @@
 /**
  * printf_hexdecimal - Displays an hex value.
  * @value: inputs value.
+ *
  * Return: value.
  */
 int printf_hexdecimal(va_list value)
