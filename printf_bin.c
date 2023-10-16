@@ -15,7 +15,7 @@ int printf_bin(va_list args)
 
 	for (i = 0; i < 32; i++)
 	{
-		j = ((a << (32 - i)) & num);
+		j = ((a << (31 - i)) & num);
 		if (j >> (31 - i))
 			flag = 1;
 		if (flag)
