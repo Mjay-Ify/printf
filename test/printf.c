@@ -9,20 +9,11 @@
 int _printf(const char * const format, ...)
 {
 	myconversion c[] = {
-		{"%c", printf_char}, 
-		{"%s", printf_string},
-	       	{"%%", printf_37},
-	       	{"%d", printf_dec},
-	       	{"%b", printf_bin},
-	       	{"%u", printf_unsigned},
-	       	{"%i", printf_int},
-		{"%r", printf_rev},
-		{"%R", printf_rot13},
-	       	{"%o", printf_oct},
-	       	{"%S", printf_string_excl},
-	       	{"%p", output_pointer},
-	       	{"%x", printf_hexdecimal},
-	       	{"%X", printf_HEXDECIMAL}
+		{"%c", printf_char}, {"%s", printf_string}, {"%%", printf_37},
+		{"%d", printf_dec}, {"%b", printf_bin}, {"%u", printf_unsigned},
+		{"%i", printf_int}, {"%r", printf_rev}, {"%R", printf_rot13},
+		{"%o", printf_oct}, {"%S", printf_string_excl},
+		{"%p", output_pointer}, {"%x", printf_hexdecimal}, {"%X", printf_HEXDECIMAL}
 	};
 
 	va_list args;
@@ -40,7 +31,7 @@ my_label:
 	while (format[i] != '\0')
 	{
 		j = 13;
-		while(j >= 0)
+		while (j >= 0)
 		{
 			if (c[j].name[0] == format[i] && c[j].name[1] == format[i + 1])
 			{
