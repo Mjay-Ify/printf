@@ -17,7 +17,7 @@ int output_char(va_list data_types, char buffer[],
 {
 	char c = va_arg(data_types, int);
 
-	return (handle_write_char(c, buffer, flags, width, precision, size));
+	return (char_write_handler(c, buffer, flags, width, precision, size));
 }
 /* FUNCTION TO OUTPUT A STRING */
 /**
@@ -138,7 +138,7 @@ int output_int(va_list types, char buffer[],
 
 	i++;
 
-	return (write_number(is_negative, i, buffer, flags, width, precision, size));
+	return (write_count(is_negative, i, buffer, flags, width, precision, size));
 }
 
 /* BINARY */
