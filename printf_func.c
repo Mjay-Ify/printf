@@ -4,13 +4,13 @@
 
 /**
  * print_char - Display a character
- @ types: Arrays of arguments
- @ buffer: buffer array to manage print
- @ flags: Indicates its active status
- @ width: values of width
- @ size: Specification of data size
- @ precision: precision specification
-  *Return: Count of printed characters.
+ * @types: Arrays of arguments
+ * @buffer: buffer array to manage print
+ * @flags: Indicates its active status
+ * @width: values of width
+ * @size: Specification of data size
+ * @precision: precision specification
+ * Return: Count of printed characters.
  */
 int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -142,6 +142,7 @@ int print_int(va_list types, char buffer[],
 }
 
 /* BINARY */
+
 /**
  * print_binary - Show an unsigned value
  * @types: Arrays of arguments

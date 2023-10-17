@@ -2,7 +2,7 @@
 /**
  * handle_print - Display argument according to its type
  * @fmt: String for displaying arguments in a specific format.
- * @list: Array of arguments.
+ * @list: Array of arguments
  * @ind: ind.
  * @buffer: Buffer array to manage print.
  * @flags: Indicate its active status

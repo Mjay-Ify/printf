@@ -6,7 +6,7 @@
  * @types: Arrays of arguments
  * @buffer: Buffer array to handle print
  * @flags: Indicates its active status
- * @width: value of width.
+ * @width: value for width.
  * @precision: Maanage Precision specification
  * @size: Specification of data size.
  * Return: count of chars printed.
