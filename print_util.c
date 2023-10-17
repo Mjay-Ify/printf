@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * is_printable - Determine if a character is displayble
- * @c:the character
+ * is_printable - Determine if a char is displayable
  *
- * Return: 1 if c is printable, 0 otherwise
+ * @c: Charater
+ *
+ * Return: 0 if c is not printable, else 1
  */
-
 int is_printable(char c)
 {
 	if (c >= 32 && c < 127)
@@ -16,16 +16,16 @@ int is_printable(char c)
 }
 
 /**
- * add_hex_code - appends the ascii in hexadecimal code to buffer
- * @buffer: Lists of characters
- * @i: Index to start from.
- * @ascii_code: THE ASSCI CODE.
+ * append_hexa_code - adds the ASCII in hex code to buffer
+ * @buffer: List of chars.
+ * @i: Index to start addiing from.
+ * @ascii_code: ASCII code.
  * Return: Always 3
  */
-int add_hex_code(char ascii_code, char buffer[], int i)
+
+int append_hexa_code(char ascii_code, char buffer[], int i)
 {
 	char map_to[] = "0123456789ABCDEF";
-
 	if (ascii_code < 0)
 		ascii_code *= -1;
 
@@ -39,11 +39,12 @@ int add_hex_code(char ascii_code, char buffer[], int i)
 }
 
 /**
- * is_digit - confirm if the character is a digit
- * @c: Character
+ * is_digit - Determine if the char is a digit
+ * @c: Access character
  *
- * Return: 1 if c is a digit, else 0
+ * Return: 0 if c is not a digit, else 1
  */
+
 int is_digit(char c)
 {
 	if (c >= '0' && c <= '9')
@@ -53,13 +54,14 @@ int is_digit(char c)
 }
 
 /**
- * compute_size_num - adds a number to the designated size
- * @num: value for addition.
- * @size: represents the type to be added.
+ * convert_size_number - Add counter to specified size
+ * @num: Values to be added.
+ * @size: Number Showing type to add.
  *
- * Return: Added input of num
+ * Return: Value of count
  */
-long int compute_size_num(long int num, int size)
+
+long int convert_size_number(long int num, int size)
 {
 	if (size == S_LONG)
 		return (num);
@@ -70,18 +72,20 @@ long int compute_size_num(long int num, int size)
 }
 
 /**
- * transform_size_unsgnd - Casts a number to the specified size
- * @count: Number to be casted
+ * convert_size_unsgnd - Casts a number to the specified size
+ * @num: Number to be casted
  * @size: Number indicating the type to be casted
  *
  * Return: Casted value of num
  */
-long int transform_size_unsgnd(unsigned long int count, int size)
+
+long int convert_size_unsgnd(unsigned long int num, int size)
 {
 	if (size == S_LONG)
-		return (count);
+		return (num);
 	else if (size == S_SHORT)
-		return ((unsigned short)count);
+		return ((unsigned short)num);
 
-	return ((unsigned int)count);
+	return ((unsigned int)num);
 }
+

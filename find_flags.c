@@ -1,34 +1,34 @@
 #include "main.h"
 
 /**
- * find_flags - Calculates the flags
- * @format: Format arguments
- * @i: parameter
+ * get_flags - Compute flags that are active
+ * @format: Display formatted args
+ * @i: Accept an arg
  * Return: Flags
  */
-int find_flags(const char *format, int *i)
+int get_flags(const char *format, int *i)
 {
 	/* - + 0 # ' ' */
 	/* 1 2 4 8  16 */
-	int a, count;
+	int h, curr_i;
 	int flags = 0;
-	const char FLAGS_CHAR[] = {'-', '+', '0', '#', ' ', '\0'};
-	const int FLAGS_ARRAY[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
+	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
+	const int FLAGS_ARR[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
 
-	for (count = *i + 1; format[count] != '\0'; count++)
+	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
 	{
-		for (a = 0; FLAGS_CHAR[a] != '\0'; a++)
-			if (format[count] == FLAGS_CHAR[a])
+		for (h = 0; FLAGS_CH[h] != '\0'; h++)
+			if (format[curr_i] == FLAGS_CH[h])
 			{
-				flags |= FLAGS_ARRAY[a];
+				flags |= FLAGS_ARR[h];
 				break;
 			}
 
-		if (FLAGS_CHAR[a] == 0)
+		if (FLAGS_CH[h] == 0)
 			break;
 	}
 
-	*i = count - 1;
+	*i = curr_i - 1;
 
 	return (flags);
 }
