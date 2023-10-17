@@ -114,7 +114,7 @@ int output_int(va_list types, char buffer[],
 	int i = BUFF_SIZE - 2;
 	int is_negative = 0;
 	long int n = va_arg(types, long int);
-	unsigned long int numb;
+	unsigned long int count;
 
 	n = convert_size_number(n, size);
 
@@ -122,18 +122,18 @@ int output_int(va_list types, char buffer[],
 		buffer[i--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
-	numb = (unsigned long int)n;
+	count = (unsigned long int)n;
 
 	if (n < 0)
 	{
-		numb = (unsigned long int)((-1) * n);
+		count = (unsigned long int)((-1) * n);
 		is_negative = 1;
 	}
 
-	while (numb > 0)
+	while (count > 0)
 	{
-		buffer[i--] = (numb % 10) + '0';
-		numb /= 10;
+		buffer[i--] = (count % 10) + '0';
+		count /= 10;
 	}
 
 	i++;
