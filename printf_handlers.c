@@ -14,7 +14,7 @@
  */
 int char_write_handler(char c, char buffer[],
 	int flags, int width, int precision, int size)
-{ /* character is kept at left and padding at buffer's right */
+{
 	int j = 0;
 	char padd = ' ';
 
