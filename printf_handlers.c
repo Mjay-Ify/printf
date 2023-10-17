@@ -74,7 +74,7 @@ int write_num(int is_negative, int index, char buffer[],
 	else if (flags & F_SPACE)
 		extra_ch = ' ';
 
-	return (write_num(index, buffer, flags, width, precision,
+	return (write_count(index, buffer, flags, width, precision,
 		len, padd, extra_ch));
 }
 

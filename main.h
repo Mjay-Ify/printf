@@ -1,4 +1,4 @@
-fndef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
@@ -95,12 +95,12 @@ int output_rot13(va_list types, char buffer[],
 /* printf handler */
 int char_write_handler(char c, char buffer[],
 			int flags, int width, int precision, int size);
-int write_num(int is_positive, int ind, char buffer[],
+int write_num(int is_positive, int index, char buffer[],
 			int flags, int width, int precision, int size);
 int write_count(int index, char buffer[],
 			int flags, int width, int prec,
 				int len, char padd, char extra_c)
-int write_pointer(char buffer[], int ind, int length,
+int write_pointer(char buffer[], int ind, int len,
 			int width, int flags, char padd, char extra_c, int padd_start);
 
 int write_unsgnd(int is_negative, int ind,

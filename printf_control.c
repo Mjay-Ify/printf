@@ -16,15 +16,15 @@ int printf_control(const char *format, int *id, va_list args, char buff[],
 {
 	int i, len = 0, chars_len = -1;
 	fmt_t fmt_types[] = {
-		{'c', printf_char}, {'s', printf_string}, {'%', printf_37},
-		{'i', printf_int}, {'d', printf_int}, {'b', printf_bin},
-		{'u', printf_unsigned}, {'o', printf_oct}, {'x', printf_hex},
-		{'X', printf_HEX}, {'p', printf_pointer}, {'S', printf_non_writable},
-		{'r', printf_rev}, {'R', printf_rot13}, {'\0', NULL}
+		{'c', output_char}, {'s', print_string}, {'%', output_percent},
+		{'i', output_int}, {'d', output_int}, {'b', print_binary},
+		{'u', output_unsigned}, {'o', print_octal}, {'x', output_hexadecimal},
+		{'X', print_upper_hex}, {'p', printf_pointer}, {'S', print_non_printable},
+		{'r', print_reverse}, {'R', output_rot13}, {'\0', NULL}
 	};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
 		if (fmt[*id] == fmt_types[i].fmt)
-			return (fmt_types[i].fn(list, buffer, flags, width, precision, size));
+			return (fmt_types[i].fn(args, buffer, flags, width, precision, size));
 
 	if (fmt_types[i].fmt == '\0')
 	{
