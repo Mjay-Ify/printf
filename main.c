@@ -8,7 +8,7 @@
  *
  * Return: Always 0
  */
-
+/**
 
 int main(void)
 {
@@ -46,6 +46,7 @@ int main(void)
     return (0);
 }
 
+*/
 
 /**
  * main - Entry point
@@ -53,7 +54,7 @@ int main(void)
  * Return: Always 0
  */
 
-/**
+
 int main(void)
 {
 	int len;
@@ -114,4 +115,4 @@ int main(void)
 	return (0);
 }
 
-*/
+
