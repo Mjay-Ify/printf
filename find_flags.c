@@ -1,4 +1,4 @@
-#include "main.h"
+#include "printf.h"
 
 /**
  * get_flags - Compute flags that are active
